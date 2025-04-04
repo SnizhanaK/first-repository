@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Button Styler</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a href="/">Home</a>
-   <button>hello</button>
+  <a href="/">Home</a><br>
+  <div id="container">
+    <button id="button1">Click Me</button>
+    <button id="button2">Click Me</button>
+    <button id="button3">Click Me</button>
+    <button id="button4">Click Me</button>
+    <button id="button5">Click Me</button>
+  </div>
+
+  <div style="text-align: center;">
+    <input type="color" id="colorPicker" oninput="changeAllButtonColors(this)"/>
+  </div>
+  
+  <script>
+    function changeAllButtonColors(input) {
+      document.documentElement.style.setProperty('--primary-color', input.value);
+    }
+  </script>
+
 </body>
 </html>
