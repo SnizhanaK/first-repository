@@ -1,5 +1,18 @@
 :root {
-  --primary-color: #7fff00
+  --primary-color: #7fff00;
+  --secondary-color: #242920;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#color {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 button {
@@ -15,44 +28,32 @@ button {
   margin: 60px;
 }
 
-#button1 {
+.btn {
+  color: var(--secondary-color);
   font-family: 'Times New Roman', Times, serif;
-  border-radius: 90px;
-  border-color: var(--primary-color);
+  border-color: var(--secondary-color);
   width: 10rem;
   padding: 10px;
   background-color: var(--primary-color);
+}
+
+#button1 {
+  border-radius: 90px;
 }
 
 #button2 {
-  font-family: 'Times New Roman', Times, serif;
-  border-color: var(--primary-color);
-  width: 10rem;
-  padding: 10px;
-  background-color: var(--primary-color);
+
 }
 
 #button3 {
-  font-family: 'Times New Roman', Times, serif;
   border-radius: 90px;
-  border-color: var(--primary-color);
-  width: 10rem;
-  padding: 10px;
-  background-color: var(--primary-color);
 }
 
 #button4 {
-  font-family: 'Times New Roman', Times, serif;
-  border-color: var(--primary-color);
-  width: 10rem;
-  padding: 10px;
-  background-color: var(--primary-color);
+
 }
 
 #button5 {
-  font-family: 'Times New Roman', Times, serif;
-  border-radius: 90px;
-  width: 10rem;
+  border-radius: 20px;
   padding: 10px;
-  background-color: var(--primary-color);
 }

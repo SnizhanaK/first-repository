@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Button Styler</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <a href="/">Home</a><br>
   <div id="container">
-    <button id="button1">Click Me</button>
-    <button id="button2">Click Me</button>
-    <button id="button3">Click Me</button>
-    <button id="button4">Click Me</button>
-    <button id="button5">Click Me</button>
+    <button id="button1" class="btn">Click Me</button>
+    <button id="button2" class="btn">Click Me</button>
+    <button id="button3" class="btn">Click Me</button>
+    <button id="button4" class="btn">Click Me</button>
+    <button id="button5" class="btn">Click Me</button>
   </div>
 
-  <div style="text-align: center;">
-    <input type="color" id="colorPicker" oninput="changeAllButtonColors(this)"/>
+  <div id="color">
+    <div class="text-center">
+      <label for="colorPicker">
+        <strong>🎨 Это для заполнения (фон)</strong>
+      </label>
+      <br>
+      <input type="color" id="colorPicker" value="#7fff00" oninput="changeAllButtonColors(this)" />
+    </div>
+
+    <div class="text-center">
+      <label for="borderColorPicker">
+        <strong>🖍️ Это для бордера (рамка)</strong>
+      </label>
+      <br>
+      <input type="color" id="borderColorPicker" value="#242920" oninput="changeAllBorderColors(this)" />
+    </div>
   </div>
-  
+
   <script>
     function changeAllButtonColors(input) {
       document.documentElement.style.setProperty('--primary-color', input.value);
     }
+    function changeAllBorderColors(input) {
+      document.documentElement.style.setProperty('--secondary-color', input.value);
+    }
   </script>
 
 </body>
+
 </html>
