@@ -11,11 +11,12 @@
 <body>
   <a href="/">Home</a><br>
   <div id="container">
-    <button id="button1" class="btn">Click Me</button>
-    <button id="button2" class="btn">Click Me</button>
-    <button id="button3" class="btn">Click Me</button>
+    <button id="button1" onclick="refreshPage()" class="btn">Refresh Page</button>
+    <button id="button2" onclick="openGoogle()" class="btn">Click Me <br> & Ask ME</button>
+    <button id="button3" onclick="sayHello()" class="btn">Click Me <img id="imgcat" src="free-icon-work-10886061.png"
+        alt=""></button>
     <button id="button4" class="btn">Click Me</button>
-    <button id="button5" class="btn">Click Me</button>
+    <button id="button5" onclick="revealText()" class="btn"></button>
   </div>
 
   <div id="color">
@@ -24,7 +25,7 @@
         <strong>🎨 Это для заполнения (фон)</strong>
       </label>
       <br>
-      <input type="color" id="colorPicker" value="#7fff00" oninput="changeAllButtonColors(this)" />
+      <input type="color" id="colorPicker" oninput="changeAllButtonColors(this)" />
     </div>
 
     <div class="text-center">
@@ -32,18 +33,59 @@
         <strong>🖍️ Это для бордера (рамка)</strong>
       </label>
       <br>
-      <input type="color" id="borderColorPicker" value="#242920" oninput="changeAllBorderColors(this)" />
+      <input type="color" id="borderColorPicker" oninput="changeAllBorderColors(this)" />
     </div>
   </div>
 
   <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const rootStyles = getComputedStyle(document.documentElement);
+      const defaultFillColor = rootStyles.getPropertyValue("--primary-color").trim();
+      const defaultBorderColor = rootStyles.getPropertyValue("--secondary-color").trim();
+
+      document.getElementById("colorPicker").value = defaultFillColor;
+      document.getElementById("borderColorPicker").value = defaultBorderColor;
+    });
     function changeAllButtonColors(input) {
       document.documentElement.style.setProperty('--primary-color', input.value);
     }
     function changeAllBorderColors(input) {
       document.documentElement.style.setProperty('--secondary-color', input.value);
     }
+
+    function refreshPage() {
+      location.reload();
+    }
+
+    function openGoogle() {
+      window.open("https://www.google.com", "_blank");
+    }
+    function sayHello() {
+      alert("Hello!");
+    }
+
+    function revealText() {
+      const btn = document.getElementById("button5");
+      btn.textContent = "Bye Bye Cat";
+      setTimeout(function () {
+        btn.textContent = ""; // удаляем текст
+      }, 5000);
+    }
   </script>
+
+
+  <!-- - Сделать что бы кнопки все таки чем-то отличались
+- При наведении на кнопки должен быть пальчик, а не стрелочка
+- Сделать разные hover эффекты на все кнопки
+- Сделать разные atcite эффекты на все кнопки
+- В третьей кнопке должна быть картинка рядом с текстом (не эмодзи)
+- В четвертой - картинка должны быть на заднем фоне
+- Добавь кнопкам функционал
+  - 1) Обновляет страницу
+  - 2) Открывает гугл в новой вкладке
+  - 3) выводил alert Hello!
+  - 4) на твое усмотрение
+  - 5) закрывает страницу -->
 
 </body>
 

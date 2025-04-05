@@ -26,34 +26,93 @@ button {
   justify-content: space-around;
   align-items: center;
   margin: 60px;
+
 }
 
 .btn {
   color: var(--secondary-color);
-  font-family: 'Times New Roman', Times, serif;
   border-color: var(--secondary-color);
   width: 10rem;
+  height: 4rem;
   padding: 10px;
   background-color: var(--primary-color);
+  /* cursor: pointer; */
+  cursor: url("free-icon-cat-sleeping-14464975-3.png"), auto;
 }
 
 #button1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
   border-radius: 90px;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  width: 15rem;
+  height: 4rem;
+  padding: 10px;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+
+#button1:hover {
+  cursor: progress;
+  /* transform: scale(1.1); */
+  box-shadow:
+    0 0 5px #e1521e,
+    0 0 10px #e1521e,
+    0 0 20px #e1521e,
+    0 0 40px #e1521e;
+  border-color: #822808;
+  color: #e1521e;
 }
 
 #button2 {
-
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 50px 0px 50px 0px;
+  border: 0.2rem double brown;
+}
+#button2:hover{
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
 }
 
+
 #button3 {
-  border-radius: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  border-radius: 30% 70% 18% 82% / 49% 30% 70% 51%;
+  /* padding: 10px; */
+
+  background-color: var(--primary-color);
+}
+
+#button3:hover {
+  box-shadow: 0 0 10px rgb(3, 3, 39);
+  transform: scale(1.1);
+}
+
+#imgcat {
+  width: 2rem;
+  height: 2rem;
+  padding-left: 1rem;
+
+
 }
 
 #button4 {
-
+  border: 0.1rem dashed brown;
 }
 
+
 #button5 {
-  border-radius: 20px;
-  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* padding: 10px; */
+  background-image: url(free-icon-animal-14067803-2.png);
+  background-size: cover;
+  background-position: center
 }
